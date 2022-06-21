@@ -13,13 +13,14 @@ output:
 ---
 
 ```{r setup, include=FALSE}
+library(tidyverse)
+library(here)
 options(htmltools.dir.version = FALSE)
 # knitr::opts_knit$set(
 #   base.dir = "2022-06-27_LeidenDelftEur/"
 # )
 knitr::opts_chunk$set(
   #fig.width=9, fig.height=3.5, fig.retina=3,
-  #fig.path = "2022-06-27_LeidenDelftEur/",
   out.width = "100%",
   cache = FALSE,
   echo = TRUE,
@@ -27,8 +28,6 @@ knitr::opts_chunk$set(
   warning = FALSE,
   hiline = TRUE
 )
-library(tidyverse)
-library(here)
 interviews_plotting <- readr::read_csv(here("assets/data/interviews_plotting.csv"))
 percent_items <- interviews_plotting %>% 
     group_by(village) %>%
@@ -42,7 +41,8 @@ style_duo(
   primary_color = "#481567ff",
   secondary_color = "#20a387ff",
   text_bold_color = "#33638DFF", 
-  code_inline_color = "#fde725ff"
+  code_inline_color = "#fde725ff", 
+  link_color = "#fde725ff"
 )
 ```
 
@@ -146,6 +146,25 @@ class: center, middle
 </a>
 
 More artwork by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
+
+---
+class: center, middle, inverse
+
+Before we start with the exercises
+
+we want to make sure the plots we generate
+
+are saved to the `fig_output` folder
+
+--
+
+Go to the `setup` chunk and insert
+
+```{r eval=FALSE}
+knitr::opts_chunk$set(
+  fig.path = here("fig_output/")
+)
+```
 
 ---
 class: center, middle, inverse
@@ -302,3 +321,14 @@ percent_items %>%
 
 
 <img src="https://media.giphy.com/media/43xU2PKxB9AUm5Z4C1/giphy.gif" align="center" height=300 />
+
+---
+class: center, middle, inverse
+
+## Possibilities
+
+<https://r-graph-gallery.com/ggplot2-package.html>
+
+```{r echo=FALSE}
+knitr::include_graphics(here("assets/img/possibilities.png"))
+```
