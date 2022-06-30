@@ -15,7 +15,10 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(here)
 interviews <- readr::read_csv("data/SAFI_clean.csv")
 interviews_plotting <- readr::read_csv("data/interviews_plotting.csv")
 options(htmltools.dir.version = FALSE)
