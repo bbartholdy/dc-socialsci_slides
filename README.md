@@ -14,9 +14,10 @@ workshop hosted by Leiden University and TU Delft.
 Slides for Day 2, Introduction to R, of the Data Carpentries
 workshop hosted by Leiden University, TU Delft, and Erasmus University Rotterdam.
 
-## 2022-06-27
+## 2022-06-27_LeidenDelftEur
 
 Slides for Day 4, Data Visualization with ggplot2, of the Data Carpentries
 workshop hosted by Leiden University, TU Delft, and Erasmus University Rotterdam.
+The program was rearranged so the Rmarkdown episode came before this.
 
 - slides: <https://bbartholdy.github.io/dc-socialsci_slides/2022-06-27_LeidenDelftEur/2022-06-27_LeidenDelftEur.html>
