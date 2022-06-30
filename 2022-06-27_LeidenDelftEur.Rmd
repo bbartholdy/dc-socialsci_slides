@@ -27,6 +27,7 @@ knitr::opts_chunk$set(
   hiline = TRUE
 )
 interviews_plotting <- readr::read_csv(here("assets/data/interviews_plotting.csv"))
+
 percent_items <- interviews_plotting %>% 
     group_by(village) %>%
     summarize(across(bicycle:no_listed_items, ~ sum(.x) / n() * 100)) %>% 
