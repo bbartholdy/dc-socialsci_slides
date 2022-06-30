@@ -18,9 +18,6 @@ library(dplyr)
 library(tidyr)
 library(here)
 options(htmltools.dir.version = FALSE)
-# knitr::opts_knit$set(
-#   base.dir = "2022-06-27_LeidenDelftEur/"
-# )
 knitr::opts_chunk$set(
   #fig.width=9, fig.height=3.5, fig.retina=3,
   out.width = "100%",
