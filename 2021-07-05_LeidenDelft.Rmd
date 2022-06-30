@@ -5,7 +5,7 @@ institute: Leiden University & TU Delft
 date: '2021-07-08 *(Updated: `r Sys.Date()`)*'
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
+    css: ../assets/css/xaringan-themer.css
     nature:
       slideNumberFormat: "%current%"
       highlightStyle: github
@@ -26,7 +26,7 @@ knitr::opts_chunk$set(
 )
 library(tidyverse)
 library(here)
-interviews_plotting <- readr::read_csv(here("data", "interviews_plotting.csv"))
+interviews_plotting <- readr::read_csv(here("assets/data", "interviews_plotting.csv"))
 percent_items <- interviews_plotting %>% 
     group_by(village) %>%
     summarize(across(bicycle:no_listed_items, ~ sum(.x) / n() * 100)) %>% 
@@ -34,14 +34,14 @@ percent_items <- interviews_plotting %>%
 ```
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
-# uses my fork of the xaringanthemer package to left-align code chunks by default
-#devtools::install_github("bbartholdy/xaringanthemer") 
 library(xaringanthemer)
 style_duo(
-  primary_color = "#1F4257",
-  secondary_color = "#F97B64",
-  text_bold_color = "#d4d640", 
-  code_inline_color = "#29e6a4"
+  primary_color = "#481567ff",
+  secondary_color = "#20a387ff",
+  text_bold_color = "#33638DFF",
+  code_inline_color = "#fde725ff",
+  link_color = "#fde725ff",
+  outfile = "assets/css/xaringan-themer.css"
 )
 ```
 
@@ -103,15 +103,15 @@ interviews_plotting %>%
 class: center, middle
 
 .pull-left[
-<img src="./dc-exercises_files/figure-html/base-pl-1-1.png" width="80%"/>
+<img src="./2021-07-05_LeidenDelft_files/figure-html/base-pl-1-1.png" width="80%"/>
 
-<img src="./dc-exercises_files/figure-html/base-pl-2-1.png" width="80%"/>
+<img src="./2021-07-05_LeidenDelft_files/figure-html/base-pl-2-1.png" width="80%"/>
 ]
 
 .pull-right[
-<img src="./dc-exercises_files/figure-html/ggplot-1-1.png" width="80%"/>
+<img src="./2021-07-05_LeidenDelft_files/figure-html/ggplot-1-1.png" width="80%"/>
 
-<img src="./dc-exercises_files/figure-html/ggplot-2-1.png" width="80%"/>
+<img src="./2021-07-05_LeidenDelft_files/figure-html/ggplot-2-1.png" width="80%"/>
 ]
 
 ---
