@@ -6,7 +6,7 @@
     <script src="2022-06-27_LeidenDelftEur_files/header-attrs/header-attrs.js"></script>
     <link href="2022-06-27_LeidenDelftEur_files/countdown/countdown.css" rel="stylesheet" />
     <script src="2022-06-27_LeidenDelftEur_files/countdown/countdown.js"></script>
-    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -22,7 +22,7 @@ class: center, middle, inverse, title-slide
 ### Leiden University, TU Delft, &amp; Erasmus University Rotterdam
 ]
 .date[
-### 2022-06-27 <em>(Updated: 2022-06-21)</em>
+### 2022-06-27 <em>(Updated: 2022-06-30)</em>
 ]
 
 ---
@@ -139,7 +139,7 @@ class: center, middle
 
 ## Exercise 1
 
-🕰 **10 mins**
+🕙 **10 mins**
 
 Create a scatter plot of `rooms` by `village` with the `respondant_wall_type`
 showing in different colours. 
@@ -148,7 +148,7 @@ Does this seem like a good way to display the relationship between these variabl
 
 What other kinds of plots might you use to show this type of data?
 
-<div class="countdown" id="timer_62b1eb7f" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62bdfdbf" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -176,15 +176,15 @@ class: center, middle
 
 ## Exercise 2
 
-🕜 **5 mins**
+🕣 **5 mins**
 
 Boxplots are useful summaries, but hide the shape of the distribution. For example,
-if the distribution is bimodal, we would not see it in a boxplot.
+if the distribution is bimodal, we wouldn't see it in a boxplot.
 
 Replace the box plot with a violin plot  
 see `geom_violin()`
 
-<div class="countdown" id="timer_62b1ec0e" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62bdfff9" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -206,9 +206,14 @@ interviews_plotting %&gt;%
 ---
 class: center, middle
 
+![](https://media.giphy.com/media/3oEhmHmWP3Y9wQxoli/giphy.gif)
+
+---
+class: center, middle
+
 ## Exercise 3
 
-🕤 **10 mins**
+⌚ **10 mins**
 
 Create a bar plot showing the proportion of respondents in each village who are 
 or are not part of an irrigation association (`memb_assoc`). 
@@ -217,7 +222,7 @@ Include only respondents who answered that question in the calculations and plot
 
 Which village had the lowest proportion of respondents in an irrigation association?
 
-<div class="countdown" id="timer_62b1ec93" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62bdfd8c" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -261,14 +266,14 @@ class: center, middle
 
 ## Exercise 4
 
-🕧 **5 mins**
+🕢 **5 mins**
 
 Experiment with at least two different themes. Build the previous plot using each
 of those themes. 
 
 Which do you like best?
 
-<div class="countdown" id="timer_62b1eb75" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62bdffe8" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -307,11 +312,32 @@ percent_items %&gt;%
 ---
 class: center, middle, inverse
 
+## Saving images
+
+Two options:
+
+
+```r
+# for the console
+ggsave(here("fig_output/my-pretty-plot.png"))
+```
+
+or
+
+```yaml
+# yaml header
+  # name will be chunk label
+knitr::opts_chunk$set(fig.path = here("fig_output/))
+```
+
+---
+class: center, middle, inverse
+
 ## Possibilities
 
 &lt;https://r-graph-gallery.com/ggplot2-package.html&gt;
 
-&lt;img src="../assets/img/possibilities.png" width="100%" /&gt;
+![](https://media.giphy.com/media/giEftvZuPAiZQBphEI/giphy.gif)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

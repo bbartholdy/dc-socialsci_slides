@@ -5,7 +5,7 @@ institute: Leiden University, TU Delft, & Erasmus University Rotterdam
 date: '2022-06-27 *(Updated: `r Sys.Date()`)*'
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
+    css: ../assets/css/xaringan-themer.css
     nature:
       highlightStyle: github
       highlightLines: true
@@ -13,12 +13,11 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
 library(here)
 options(htmltools.dir.version = FALSE)
-# knitr::opts_knit$set(
-#   base.dir = "2022-06-27_LeidenDelftEur/"
-# )
 knitr::opts_chunk$set(
   #fig.width=9, fig.height=3.5, fig.retina=3,
   out.width = "100%",
@@ -40,9 +39,10 @@ library(xaringanthemer)
 style_duo(
   primary_color = "#481567ff",
   secondary_color = "#20a387ff",
-  text_bold_color = "#33638DFF", 
-  code_inline_color = "#fde725ff", 
-  link_color = "#fde725ff"
+  text_bold_color = "#33638DFF",
+  code_inline_color = "#fde725ff",
+  link_color = "#fde725ff",
+  outfile = here("assets/css/xaringan-themer.css")
 )
 ```
 
@@ -84,8 +84,8 @@ class: center, middle
 ```{r ggplot-1, echo=FALSE}
 interviews_plotting %>% 
    ggplot(aes(x = no_membrs, y = number_items, color = village)) +
-      geom_count() +
-      theme_bw() +
+      geom_count(alpha = 0.6) +
+      theme_minimal() +
       labs(x = "Number of items", 
            y = "Number of members in a household")
 ```
@@ -95,11 +95,13 @@ interviews_plotting %>%
 ```{r ggplot-2, echo=FALSE}
 interviews_plotting %>%
     ggplot(aes(x = village, y = rooms, col = village)) +
-    geom_boxplot() +
-    geom_jitter(width = 0.2) +
-    theme_classic() +
+    geom_boxplot(outlier.colour = NA) +
+    geom_jitter(width = 0.2, alpha = 0.6) +
+    theme_bw() +
     theme(legend.position = "none",
-          axis.title.x = element_blank()) +
+          axis.title.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          panel.grid.major.x = element_blank()) +
     scale_fill_viridis_d() # add colourblind-friendly palette
 ```
 ]
@@ -211,7 +213,7 @@ class: center, middle
 `r emo::ji("clock")` **5 mins**
 
 Boxplots are useful summaries, but hide the shape of the distribution. For example,
-if the distribution is bimodal, we would not see it in a boxplot.
+if the distribution is bimodal, we wouldn't see it in a boxplot.
 
 Replace the box plot with a violin plot  
 see `geom_violin()`
@@ -229,6 +231,11 @@ interviews_plotting %>%
   geom_violin(alpha = 0) +
   geom_jitter(alpha = 0.5, width = 0.4, color = "tomato")
 ```
+
+---
+class: center, middle
+
+![](https://media.giphy.com/media/3oEhmHmWP3Y9wQxoli/giphy.gif)
 
 ---
 class: center, middle
@@ -325,10 +332,28 @@ percent_items %>%
 ---
 class: center, middle, inverse
 
+## Saving images
+
+Two options:
+
+```{r eval=FALSE}
+# for the console
+ggsave(here("fig_output/my-pretty-plot.png"))
+```
+
+or
+
+```yaml
+# yaml header
+  # name will be chunk label
+knitr::opts_chunk$set(fig.path = here("fig_output/))
+```
+
+---
+class: center, middle, inverse
+
 ## Possibilities
 
 <https://r-graph-gallery.com/ggplot2-package.html>
 
-```{r echo=FALSE}
-knitr::include_graphics(here("assets/img/possibilities.png"))
-```
+![](https://media.giphy.com/media/giEftvZuPAiZQBphEI/giphy.gif)
