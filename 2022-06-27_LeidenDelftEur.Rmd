@@ -331,7 +331,7 @@ percent_items %>%
 ---
 class: center, middle, inverse
 
-## Saving images
+## Saving plots
 
 Two options:
 

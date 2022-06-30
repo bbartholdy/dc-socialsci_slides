@@ -1,5 +1,7 @@
 # Slides for Data Carpentry Social Science Curriculum
 
+[![render-rmarkdown](https://github.com/bbartholdy/dc-socialsci_slides/actions/workflows/render-rmarkdown.yaml/badge.svg)](https://github.com/bbartholdy/dc-socialsci_slides/actions/workflows/render-rmarkdown.yaml)
+
 Curriculum: <https://datacarpentry.org/lessons/#social-science-curriculum>  
 
 ## 2021-07-05_LeidenDelft

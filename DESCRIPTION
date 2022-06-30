@@ -16,4 +16,5 @@ Imports:
     readr,
     rmarkdown,
     tidyr,
-    xaringan
+    xaringan,
+    xaringanthemer
