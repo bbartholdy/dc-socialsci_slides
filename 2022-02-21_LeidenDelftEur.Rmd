@@ -6,7 +6,7 @@ institute: |
 date: '2022-02-22 *(Updated: `r Sys.Date()`)*'
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
+    css: ../assets/css/xaringan-themer.css
     nature:
       slideNumberFormat: "%current%"
       highlightStyle: github
