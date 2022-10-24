@@ -29,5 +29,11 @@ The program was rearranged so the Rmarkdown episode came before this.
 
 ## 2022-10-24_dc-ldev
 
+Slides for Day 4, R Markdown and Data Visualization with ggplot2,
+of the Data Carpentries workshop hosted by Leiden University, TU Delft,
+Erasmus University Rotterdam, and VU Amsterdam.
+The program was rearranged so the R Markdown episode came before Data
+Visualization with ggplot2.
+
 - slides: <https://bbartholdy.github.io/2022-10-24_dc-ldev/day-4_exercises.html>
 - repo: <https://github.com/bbartholdy/2022-10-24_dc-ldev>
