@@ -1,7 +1,5 @@
 # Slides for Data Carpentry Social Science Curriculum
 
-[![render-rmarkdown](https://github.com/bbartholdy/dc-socialsci_slides/actions/workflows/render-rmarkdown.yaml/badge.svg)](https://github.com/bbartholdy/dc-socialsci_slides/actions/workflows/render-rmarkdown.yaml)
-
 Curriculum: <https://datacarpentry.org/lessons/#social-science-curriculum>  
 
 ## 2021-07-05_LeidenDelft
@@ -26,4 +24,10 @@ Slides for Day 4, Data Visualization with ggplot2, of the Data Carpentries
 workshop hosted by Leiden University, TU Delft, and Erasmus University Rotterdam.
 The program was rearranged so the Rmarkdown episode came before this.
 
-- slides: <https://bbartholdy.github.io/dc-socialsci_slides/2022-06-27_LeidenDelftEur/2022-06-27_LeidenDelftEur.html>
+- slides: <https://bbartholdy.github.io/2022-06-27_dc-socialsci_LDEV/2022-06-27_LeidenDelftEur.html#1>
+- repo: <https://github.com/bbartholdy/2022-06-27_dc-socialsci_LDEV>
+
+## 2022-10-24_dc-ldev
+
+- slides: <https://bbartholdy.github.io/2022-10-24_dc-ldev/day-4_exercises.html>
+- repo: <https://github.com/bbartholdy/2022-10-24_dc-ldev>
